@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobFinder | Indeed Clone</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">JobFinder</div>
+    <nav>
+      <button id="homeBtn">Find Jobs</button>
+      <button id="dashboardBtn">Dashboard</button>
+      <button id="postJobBtn">Post Job</button>
+      <button id="authBtn">Login / Register</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="searchSection" class="card">
+      <h1>Search jobs, companies, and locations</h1>
+      <form id="searchForm" class="search-form">
+        <input type="text" id="searchQuery" placeholder="Job title, keywords, or company" />
+        <input type="text" id="searchLocation" placeholder="Location" />
+        <select id="searchType">
+          <option value="">All job types</option>
+          <option value="Full-time">Full-time</option>
+          <option value="Part-time">Part-time</option>
+          <option value="Contract">Contract</option>
+          <option value="Internship">Internship</option>
+        </select>
+        <label><input type="checkbox" id="searchRemote" /> Remote only</label>
+        <button type="submit">Search</button>
+      </form>
+      <div id="jobCount" class="subtitle"></div>
+      <div id="jobList" class="job-list"></div>
+    </section>
+
+    <section id="detailsSection" class="card hidden">
+      <button id="backToListBtn" class="secondary-btn">Back to results</button>
+      <div id="jobDetails"></div>
+    </section>
+
+    <section id="authSection" class="card hidden">
+      <div class="auth-grid">
+        <div>
+          <h2>Login</h2>
+          <form id="loginForm" class="form-grid">
+            <input type="email" id="loginEmail" placeholder="Email" required />
+            <input type="password" id="loginPassword" placeholder="Password" required />
+            <button type="submit">Login</button>
+          </form>
+        </div>
+        <div>
+          <h2>Register</h2>
+          <form id="registerForm" class="form-grid">
+            <input type="text" id="registerName" placeholder="Full name" required />
+            <input type="email" id="registerEmail" placeholder="Email" required />
+            <input type="password" id="registerPassword" placeholder="Password" required />
+            <select id="registerRole">
+              <option value="jobseeker">Job Seeker</option>
+              <option value="employer">Employer</option>
+            </select>
+            <button type="submit">Register</button>
+          </form>
+        </div>
+      </div>
+      <div id="authMessage" class="message"></div>
+    </section>
+
+    <section id="postJobSection" class="card hidden">
+      <h2>Post a new job</h2>
+      <form id="postJobForm" class="form-grid">
+        <input type="text" id="jobTitle" placeholder="Job title" required />
+        <input type="text" id="jobCompany" placeholder="Company name" required />
+        <input type="text" id="jobLocation" placeholder="Location" required />
+        <select id="jobType" required>
+          <option value="Full-time">Full-time</option>
+          <option value="Part-time">Part-time</option>
+          <option value="Contract">Contract</option>
+          <option value="Internship">Internship</option>
+        </select>
+        <label class="checkbox-label"><input type="checkbox" id="jobRemote" /> Remote</label>
+        <input type="text" id="jobSalary" placeholder="Salary range" />
+        <textarea id="jobDescription" placeholder="Job description" rows="5" required></textarea>
+        <textarea id="jobRequirements" placeholder="Requirements (comma separated)" rows="3"></textarea>
+        <textarea id="jobBenefits" placeholder="Benefits (comma separated)" rows="3"></textarea>
+        <button type="submit">Publish Job</button>
+      </form>
+      <div id="postJobMessage" class="message"></div>
+    </section>
+
+    <section id="dashboardSection" class="card hidden">
+      <h2>Your Dashboard</h2>
+      <div id="dashboardContent"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built as a job board clone with search, listings, applications, and employer posting.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

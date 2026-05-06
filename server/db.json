@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "id": "user-1",
+      "name": "Ava Johnson",
+      "email": "ava@example.com",
+      "password": "password123",
+      "role": "jobseeker"
+    },
+    {
+      "id": "emp-1",
+      "name": "Candor Tech",
+      "email": "recruiter@candortech.com",
+      "password": "password123",
+      "role": "employer"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job-1",
+      "title": "Frontend Software Engineer",
+      "company": "Candor Tech",
+      "location": "San Francisco, CA",
+      "type": "Full-time",
+      "remote": true,
+      "salary": "$110k - $140k",
+      "description": "Build responsive React applications, improve design systems, and collaborate with product teams.",
+      "requirements": [
+        "3+ years of frontend experience",
+        "React, JavaScript, HTML/CSS",
+        "Strong communication skills"
+      ],
+      "benefits": ["Remote flexibility", "Medical insurance", "401(k) matching"],
+      "postedAt": "2026-05-01",
+      "employerId": "emp-1"
+    },
+    {
+      "id": "job-2",
+      "title": "Product Marketing Manager",
+      "company": "Candor Tech",
+      "location": "Austin, TX",
+      "type": "Full-time",
+      "remote": false,
+      "salary": "$95k - $120k",
+      "description": "Lead go-to-market motions for new B2B product launches.",
+      "requirements": ["5+ years in product marketing", "Experience with SaaS launches", "Excellent stakeholder management"],
+      "benefits": ["Paid parental leave", "Flexible schedule", "Equity"],
+      "postedAt": "2026-05-03",
+      "employerId": "emp-1"
+    }
+  ],
+  "applications": []
+}
